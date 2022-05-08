@@ -1,0 +1,277 @@
+/** JetBrainsMono **/
+
+/* Thin */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/etBrainsMono-ThinItalic.ttf") format("truetype");
+	font-weight: 100;
+	font-style: italic;
+}
+
+/* Extra Light */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-ExtraLight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-ExtraLightItalic.ttf")
+		format("truetype");
+	font-weight: 200;
+	font-style: italic;
+}
+
+/* Light */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-LightItalic.ttf")
+		format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+/* Normal */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-RegularItalic.ttf")
+		format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+/* Medium */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-MediumItalic.ttf")
+		format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+/* Semibold */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-SemiBoldItalic.ttf")
+		format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* Bold */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-ExtraBold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-ExtraBoldItalic.ttf")
+		format("truetype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+/* Extrabold */
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMono";
+	src: url("/assets/fonts/ttf/JetBrainsMono-ExtraBoldItalic.ttf")
+		format("truetype");
+	font-weight: 800;
+	font-style: italic;
+}
+
+/** JetBrainsMonoNL **/
+
+/* NL Thin */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ThinItalic.ttf")
+		format("truetype");
+	font-weight: 100;
+	font-style: italic;
+}
+
+/* NL Extra Light */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ExtraLight.ttf")
+		format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ExtraLightItalic.ttf")
+		format("truetype");
+	font-weight: 200;
+	font-style: italic;
+}
+
+/* NL Light */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-LightItalic.ttf")
+		format("truetype");
+	font-weight: 300;
+	font-style: italic;
+}
+
+/* NL Normal */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-RegularItalic.ttf")
+		format("truetype");
+	font-weight: 400;
+	font-style: italic;
+}
+
+/* NL Medium */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-MediumItalic.ttf")
+		format("truetype");
+	font-weight: 500;
+	font-style: italic;
+}
+
+/* NL Semibold */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-SemiBoldItalic.ttf")
+		format("truetype");
+	font-weight: 600;
+	font-style: italic;
+}
+
+/* NL Bold */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ExtraBold.ttf")
+		format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ExtraBoldItalic.ttf")
+		format("truetype");
+	font-weight: 700;
+	font-style: italic;
+}
+
+/* NL Extrabold */
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ExtraBold.ttf")
+		format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "JetBrainsMonoNL";
+	src: url("/assets/fonts/ttf/JetBrainsMonoNL-ExtraBoldItalic.ttf")
+		format("truetype");
+	font-weight: 800;
+	font-style: italic;
+}

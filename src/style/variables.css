@@ -1,0 +1,8 @@
+:root {
+	--background: #e46d6d;
+	--foreground: black;
+
+	--font-family: "monospace";
+	--font-size-large: 25px;
+	--font-size-small: 20px;
+}
