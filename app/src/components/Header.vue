@@ -69,4 +69,8 @@
       color: black;
    }
 
+   .menu__link:hover {
+      color: white;
+   }
+
 </style>

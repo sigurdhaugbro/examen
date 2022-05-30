@@ -1,26 +1,49 @@
 <template>
 	<section class="landing">
-		<h1 class="landing__header">Nyheter</h1>
+			<h1 class="landing__header">Nyheter</h1>
+		
 		<figure class="landing__image">
-			<img src="images/licorice-pizza.jpg" alt="">
+			<img :src="movies[0].image" alt="">
 		</figure>
 	</section>
 	<section class="latest">
 		<figure class="latest__poster">
-			<img class="poster__image" src="images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg" alt="">
-			<figcaption class="poster__title">C'mon C'mon</figcaption>
+			<img class="poster__image" :src="movies[1].image" alt="">
+			<figcaption class="poster__title">{{movies[1].title}}</figcaption>
 		</figure>
 	</section>
 	<section class="latest">
 		<figure class="latest__poster">
-			<img class="poster__image" src="images/zero.png" alt="">
-			<figcaption class="poster__title">Zero Fucks Given</figcaption>
+			<img class="poster__image" :src="movies[2].image" alt="">
+			<figcaption class="poster__title">{{ movies[2].title }}</figcaption>
 		</figure>
 	</section>
 </template>
 
 <script>
-
+	export default {
+		data() {
+			return {
+				movies: [
+					{
+						title: 'Licorice Pizza', 
+						image: 'images/licorice-pizza.jpg', 
+						alt: 'poster'
+					},
+					{
+						title: 'C´mon C´mon', 
+						image: 'images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg', 
+						alt: 'poster'
+					},
+					{
+						title: 'Zero Fucks Given', 
+						image: 'images/zero.png', 
+						alt: 'poster'
+					}
+				]
+			}
+		}
+	}
 </script>
 
 <style scoped>

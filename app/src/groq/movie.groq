@@ -1,0 +1,8 @@
+*[_type == 'movie'] {
+  title,
+  poster,
+  price,
+  trailer,
+  todayStart,
+  tomorrowStart
+}

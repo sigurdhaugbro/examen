@@ -13,7 +13,6 @@ export default {
          this.content  = await sanity.fetch(query, params);
          this.loading = false;
          console.log(this.content)
-
       }
    }
 }

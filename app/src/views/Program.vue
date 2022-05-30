@@ -2,7 +2,7 @@
    <h1>Program</h1>
    <main v-for="movie in movies" :key="movie.id" class="program">
       <figure class="program__film">
-         <img class="film__poster" :src='movie.poster' alt="{{alt}}">
+         <img class="film__poster" :src='movie.poster' :alt='movie.alt'>
          <figcaption class="film__caption">{{ movie.title }}</figcaption>
       </figure>
 
@@ -32,15 +32,40 @@
 </template>
 
 <script>
+   import query from '../groq/movie.groq?raw'
+	import viewMixins from '../mixins/viewMixin.js'
+
    export default {
+      mixins: [viewMixins],
+
+      async created() {
+        await this.sanityFetch(query)
+        this.movies = this.content
+      },
+      
       data() {
          return {
             visible: false,
-            test: 'test',
             movies: [
-               { id: '001', title: 'C´mon C´mon', price: 120, todayStart: 'Mandag 14:30', tomorrowStart: 'Tirsdag 18:30', poster: 'public/images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg'  },
-               { id: '002', title: 'Licorice Pizza', price: 120, todayStart: 'Mandag 19:30', tomorrowStart: 'Tirsdag 11:30', poster: 'public/images/licorice-pizza.jpg' }
-            ]
+               { 
+               id: '001', 
+               title: 'C´mon C´mon', 
+               price: 120, 
+               todayStart: 'Mandag 14:30', 
+               tomorrowStart: 'Tirsdag 18:30', 
+               poster: 'public/images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg', 
+               alt: 'Poster of C´mon C´mon'  
+               },
+               { 
+               id: '002', 
+               title: 'Licorice Pizza', 
+               price: 120, 
+               todayStart: 'Mandag 19:30', 
+               tomorrowStart: 'Tirsdag 11:30', 
+               poster: 'public/images/licorice-pizza.jpg', 
+               alt: 'Poster of Licorice Pizza' 
+               }
+            ] 
          }
       },
    }
@@ -76,6 +101,10 @@
       padding-top: 50px;
    }
 
+   .viewings__tickets:hover {
+      text-decoration: underline;
+   }
+
    .form {
       margin-top: 20px;
       background: white;
@@ -83,6 +112,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 10px;
+      transition: ease 2s;
    }
 
    .form__element {
@@ -91,24 +121,30 @@
 
    .form__element--day {
       margin: 10px 0px 0px 10px;
-      width: 120px; 
+      width: 120px;
+      border: solid black 1px;
+      color: black;
+      border-radius: 0%;
    }
 
    .form__element--quantity {
       margin: 10px 0px 0px 10px;
       width: 120px;
       border: solid black 1px; 
+      border-radius: 0%;
    }
 
    .form__element--email {
       margin: 10px 0px 0px 10px;
       width: 120px;
       border: solid black 1px; 
+      border-radius: 0%;
    }
 
    .form__element--button {
       grid-area: 1 / span 2;
       grid-row: 8;
       text-align: center;
+      margin-top: 20px;
    }
 </style>

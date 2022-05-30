@@ -20,21 +20,18 @@ export default {
         maxLength: 100,
       },
     },
-   
-   
     {
       name: 'id',
       title: 'ID',
       type: 'number',
     },
-
     {
       name: 'poster',
       title: 'Poster Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
+      // options: {
+      //   hotspot: true,
+      // },
     },
     {
       name: 'todayStart',
@@ -50,6 +47,11 @@ export default {
       name: 'price',
       title: 'Price',
       type: 'number'
+    },
+    {
+      name: 'trailer',
+      title: 'Trailer, embeded code from You Tube',
+      type: 'string'
     }
 
 
