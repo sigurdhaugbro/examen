@@ -1,6 +1,10 @@
 *[_type == 'movie'] {
   title,
-  poster,
+  poster {
+    asset -> {
+      url
+    }
+  },
   price,
   trailer,
   todayStart,

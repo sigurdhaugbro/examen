@@ -12,7 +12,7 @@
          <RouterLink class="menu__link" :to="{ name: 'program' }" @click="close">Program</RouterLink>
       </div>
       <div class="menu__link">
-         <RouterLink class="menu__link" :to="{ name: 'trailers' }" @click="close">Trailere</RouterLink>
+         <RouterLink class="menu__link" :to="{ name: 'home' }" @click="close">Nyheter</RouterLink>
       </div>
       <div class="menu__link">
          <RouterLink class="menu__link" :to="{ name: 'menu' }" @click="close">Meny</RouterLink>
