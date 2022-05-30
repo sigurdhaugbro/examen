@@ -1,15 +1,15 @@
 <template>
    <h1>Program</h1>
-   <main class="program">
+   <main v-for="movie in movies" :key="movie.id" class="program">
       <figure class="program__film">
-         <img class="film__poster" src="public/images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg" alt="{{alt}}">
-         <figcaption class="film__caption">C'mon C'mon</figcaption>
+         <img class="film__poster" :src='movie.poster' alt="{{alt}}">
+         <figcaption class="film__caption">{{ movie.title }}</figcaption>
       </figure>
 
       <section class="program__viewings">
          <div class="viewings__times">
-            <div class="times__day">Mandag 14:30</div>
-            <div class="times__day">Tirsdag 19:00</div>
+            <div class="times__day">{{ movie.todayStart }}</div>
+            <div class="times__day">{{ movie.tomorrowStart }}</div>
          </div>
          <button class="viewings__tickets" @click="visible ^= true">Kjøp Billett</button>
       </section>
@@ -17,17 +17,15 @@
       <form class="form" action="" v-if="visible">
          <label class="form__element" for="date-and-time">Dag:</label>
          <select class="form__element--day" name="date-and-time" id="date-and-time">
-            <option value="monday 14:30">Mandag 14:30</option>
-            <option value="monday 19:30">Tirsdag 19:30</option>
+            <option value="monday 14:30">{{ movie.todayStart }}</option>
+            <option value="monday 19:30">{{ movie.tomorrowStart }}</option>
          </select>
          <div   class="form__element" >Pris:</div>
-         <div   class="form__element" >120kr</div>
+         <div   class="form__element" >{{ movie.price }}</div>
          <label class="form__element" for="quantity">Anntall:</label>
          <input class="form__element--quantity" type="number" id="quantity" name="quantity" min="1" max="10">
          <label class="form__element" for="email">Epost:</label>
-         <input class="form__element" type="email" id="email" name="email">
-         <div class="form__element">Sum:</div>
-         <div class="form__element">sum</div>
+         <input class="form__element--email" type="email" id="email" name="email">
          <button class="form__element--button">Kjøp</button>
       </form>
    </main>
@@ -37,7 +35,12 @@
    export default {
       data() {
          return {
-            visible: false
+            visible: false,
+            test: 'test',
+            movies: [
+               { id: '001', title: 'C´mon C´mon', price: 120, todayStart: 'Mandag 14:30', tomorrowStart: 'Tirsdag 18:30', poster: 'public/images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg'  },
+               { id: '002', title: 'Licorice Pizza', price: 120, todayStart: 'Mandag 19:30', tomorrowStart: 'Tirsdag 11:30', poster: 'public/images/licorice-pizza.jpg' }
+            ]
          }
       },
    }
@@ -93,7 +96,14 @@
 
    .form__element--quantity {
       margin: 10px 0px 0px 10px;
-      width: 25px; 
+      width: 120px;
+      border: solid black 1px; 
+   }
+
+   .form__element--email {
+      margin: 10px 0px 0px 10px;
+      width: 120px;
+      border: solid black 1px; 
    }
 
    .form__element--button {
