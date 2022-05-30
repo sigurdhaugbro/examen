@@ -2,7 +2,7 @@
    <h1>Program</h1>
    <main v-for="movie in movies" :key="movie.id" class="program">
       <figure class="program__film">
-         <img class="film__poster" :src='movie.poster' :alt='movie.alt'>
+         <img class="film__poster" :src='movie.poster.asset.url' :alt='movie.alt'>
          <figcaption class="film__caption">{{ movie.title }}</figcaption>
       </figure>
 

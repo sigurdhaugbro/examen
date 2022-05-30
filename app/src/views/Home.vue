@@ -3,25 +3,35 @@
 			<h1 class="landing__header">Nyheter</h1>
 		
 		<figure class="landing__image">
-			<img :src="movies[0].image" alt="">
+			<img :src="movies[0].poster.asset.url" alt="">
 		</figure>
 	</section>
 	<section class="latest">
 		<figure class="latest__poster">
-			<img class="poster__image" :src="movies[1].image" alt="">
+			<img class="poster__image" :src="movies[1].poster.asset.url" alt="">
 			<figcaption class="poster__title">{{movies[1].title}}</figcaption>
 		</figure>
 	</section>
 	<section class="latest">
 		<figure class="latest__poster">
-			<img class="poster__image" :src="movies[2].image" alt="">
+			<img class="poster__image" :src="movies[2].poster.asset.url" alt="">
 			<figcaption class="poster__title">{{ movies[2].title }}</figcaption>
 		</figure>
 	</section>
 </template>
 
 <script>
+	import query from '../groq/movie.groq?raw'
+	import viewMixins from '../mixins/viewMixin.js'
+
 	export default {
+		mixins: [viewMixins],
+
+      async created() {
+        await this.sanityFetch(query)
+        this.movies = this.content
+      },
+
 		data() {
 			return {
 				movies: [
