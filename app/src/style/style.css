@@ -14,9 +14,6 @@ h1 {
 	background: white;
 	padding: 10px;
 	text-align: center;
-	/* height: fit-content;
-	width: fit-content;
-	position: relative; */
 }
 
 @media screen and (min-width: 1000px) {
@@ -24,39 +21,6 @@ h1 {
 		text-align: left;
 	}
 }
-
-/* h1:before, h1:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-h1::before {
-	background: white;
-	animation: typwriterAnimation 4s steps(7) forwards;
-}
-
-h1::after {
-	width: 0.125em;
-	background: black;
-	animation: typwriterAnimation 4s steps(7) forwards,
-	blink 750ms steps(24) infinite;
-}
-
-@keyframes typwriterAnimation {
-	to {
-		left: 100%;
-	}
-}
-
-@keyframes blink {
-	to {
-		background: transparent;
-	}
-} */
 
 h2 {
 	font-size: var(--font-size-large);
@@ -66,4 +30,5 @@ h3 {
 	font-size: var(--font-size-large);
 	font-weight: 500;
 }
+
 

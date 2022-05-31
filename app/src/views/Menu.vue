@@ -26,10 +26,12 @@
             <div class="item__description">Mostly horse meat</div>
          </div>
 
-         <h3 class="menu__quote">"I'll have what she's having"</h3>
+         <h3 class="menu__quote">
+            <span class="quote__text">"I'll have what she's having"</span> 
+         </h3>
       </section>
    </main>
-   
+
 </template>
 
 <style>
@@ -58,6 +60,24 @@
       margin-top: 40px;
    }
 
+   .quote__text {
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+   }
+
+   @keyframes typwriterAnimation {
+	   to {
+		   left: 100%;
+	   }
+   }
+
+   @keyframes blink {
+	   to {
+		   background: transparent;
+	   }
+   }
+
    @media screen and (min-width: 1000px) {
       .menu-container {
          padding: 0px 25% 0 25%;
@@ -70,7 +90,29 @@
       .item__description {
          margin-top: 10px
       }
-   }
+   
+      .quote__text:before, .quote__text:after {
+      	content: "";
+      	position: absolute;
+      	top: 0;
+      	right: 0;
+      	bottom: 0;
+      	left: 0;
+      }
+   
+      .quote__text::before {
+      	background: white;
+      	animation: typwriterAnimation 8s steps(29) forwards;
+      }
+   
+      .quote__text::after {
+	      width: 0.125em;
+	      background: black;
+	      animation: typwriterAnimation 8s steps(29) forwards,
+	      blink 750ms steps(24) infinite;
+      }
+   
+      }
 
 
 </style>

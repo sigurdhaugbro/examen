@@ -46,6 +46,7 @@
       padding: 10px;
       text-align: center;
    }
+
    @media screen and (min-width: 1000px) {
       .about__caption {
          padding: 0 200px 0 200px;

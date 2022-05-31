@@ -51,10 +51,8 @@
 </script>
 
 <style scoped>
-
 	.landing {
 		background: white;
-		/* height: 300px; */
 		text-align: center;
 	}
 	.landing__image {
@@ -70,7 +68,6 @@
 	}
 
 	@media screen and (min-width: 1000px) {
-
 		.home {
 			display: flex;
 		}
@@ -82,12 +79,10 @@
 		.latest {
 			width: 81%;
 			padding-top: 40px;
-
 		}
 
 		.poster__title {
 			text-align: left;
 		}
-		
 	}
 </style>
