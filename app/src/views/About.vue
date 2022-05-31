@@ -3,11 +3,17 @@
    <main class="about">
       <section class="slideshow">
          <button class="slideshow__button--prev" @click="previous()">
-            btn
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M3.33325 10H16.6666M9.16659 4.16666L3.33325 10L9.16659 15.8333V4.16666Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
          </button>
          <img class="slideshow__image" :src="slides[index].src" :alt="slides[index].alt">   
          <button class="slideshow__button--next" @click="next()">
-            btn
+             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M16.6667 9.99999H3.33342M10.8334 4.16666L16.6667 9.99999L10.8334 15.8333V4.16666Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+
          </button>
       </section>
       <h2 class="about__title">{{ slides[index].title }} </h2>
@@ -23,17 +29,29 @@
    }
    .slideshow {
       display: flex;
-      width: 100vw;
+      text-align: center;
+      /* border: solid; */
    }
 
    button {
-      width: 5%;
-      font-size: 10px;
+      width: 10%;
+      text-align: center;
    }
-
    .slideshow__image {
       width: 80%;
+      text-align: center;
    }
+   .about__title {
+      font-size: 30px;
+      padding: 10px;
+      text-align: center;
+   }
+   @media screen and (min-width: 1000px) {
+      .about__caption {
+         padding: 0 200px 0 200px;
+      }
+   }
+
 </style>
 
 <script>
@@ -43,21 +61,21 @@
             index: 0,
             slides: [
                {
-                  title: 'img1',
+                  title: 'KoM er er en kino med fokus på god film og god mat',
                   src: 'images/outside.jpeg',
                   caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien eu, risus, arcu erat morbi elementum vel.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien eu, risus, arcu erat morbi elementum vel.',
                   alt: 'this is img1'
                },
 
                {
-                  title: 'img2',
+                  title: 'Vi har 3 Saler',
                   src: 'images/inside.jpeg',
                   caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien eu, risus, arcu erat morbi elementum vel.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien eu, risus, arcu erat morbi elementum vel.',
                   alt: 'this is img2'
                },
 
                {
-                  title: 'img3 bla bla blablabal',
+                  title: 'Vi har ny meny annen vær uke',
                   src: 'images/food.jpeg',
                   caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien eu, risus, arcu erat morbi elementum vel.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien eu, risus, arcu erat morbi elementum vel.',
                   alt: 'this is img3'
