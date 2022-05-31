@@ -1,33 +1,35 @@
 <template>
    <h1>Meny</h1>
-   <section class="menu">
-      <div class="menu__item">
-         <h2 class="item__title">Licorice Pizza</h2>
-         <div class="item__price">150kr</div>         
-         <div class="item__description">pizza med lakris og annet digg</div>
-      </div>
+   <main class="menu-container">
+      <section class="menu">
+         <div class="menu__item">
+            <h2 class="item__title">Licorice Pizza</h2>
+            <div class="item__price">150kr</div>         
+            <div class="item__description">pizza med lakris og annet digg</div>
+         </div>
 
+         <div class="menu__item">
+            <h2 class="item__title">Royal with Cheese</h2>
+            <div class="item__price">120kr</div>         
+            <div class="item__description">Because of the Metric System</div>
+         </div>
 
-      <div class="menu__item">
-         <h2 class="item__title">Royal with Cheese</h2>
-         <div class="item__price">120kr</div>         
-         <div class="item__description">Because of the Metric System</div>
-      </div>
+         <div class="menu__item">
+            <h2 class="item__title">Fish are friends not food</h2>
+            <div class="item__price">190kr</div>         
+            <div class="item__description">42 Wallaby Way Sydney</div>
+         </div>
 
-      <div class="menu__item">
-         <h2 class="item__title">Fish are friends not food</h2>
-         <div class="item__price">190kr</div>         
-         <div class="item__description">42 Wallaby Way Sydney</div>
-      </div>
+         <div class="menu__item">
+            <h2 class="item__title">An offer you can't refuse</h2>
+            <div class="item__price">140kr</div>         
+            <div class="item__description">Mostly horse meat</div>
+         </div>
 
-      <div class="menu__item">
-         <h2 class="item__title">An offer you can't refuse</h2>
-         <div class="item__price">140kr</div>         
-         <div class="item__description">Mostly horse meat</div>
-      </div>
-
-      <h3 class="menu__quote">"I'll have what she's having"</h3>
-   </section>
+         <h3 class="menu__quote">"I'll have what she's having"</h3>
+      </section>
+   </main>
+   
 </template>
 
 <style>
@@ -55,5 +57,20 @@
       text-align: center;
       margin-top: 40px;
    }
+
+   @media screen and (min-width: 1000px) {
+      .menu-container {
+         padding: 0px 25% 0 25%;
+      }
+
+      .menu__item {
+         margin-bottom: 50px;
+      }
+
+      .item__description {
+         margin-top: 10px
+      }
+   }
+
 
 </style>

@@ -19,6 +19,12 @@ h1 {
 	position: relative; */
 }
 
+@media screen and (min-width: 1000px) {
+	h1 {
+		text-align: left;
+	}
+}
+
 /* h1:before, h1:after {
 	content: "";
 	position: absolute;

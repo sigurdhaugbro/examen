@@ -1,33 +1,35 @@
 <template>
    <h1>Program</h1>
-   <main v-for="movie in movies" :key="movie.id" class="program">
-      <figure class="program__film">
-         <img class="film__poster" :src='movie.poster.asset.url' :alt='movie.alt'>
-         <figcaption class="film__caption">{{ movie.title }}</figcaption>
-      </figure>
+   <main class="container">
+      <section v-for="movie in movies" :key="movie.id" class="program">
+         <figure class="program__film">
+            <img class="film__poster" :src='movie.poster.asset.url' :alt='movie.alt'>
+            <figcaption class="film__caption">{{ movie.title }}</figcaption>
+         </figure>
 
-      <section class="program__viewings">
-         <div class="viewings__times">
-            <div class="times__day">{{ movie.todayStart }}</div>
-            <div class="times__day">{{ movie.tomorrowStart }}</div>
-         </div>
-         <button class="viewings__tickets" @click="visible ^= true">Kjøp Billett</button>
+         <section class="program__viewings">
+            <div class="viewings__times">
+               <div class="times__day">{{ movie.todayStart }}</div>
+               <div class="times__day">{{ movie.tomorrowStart }}</div>
+            </div>
+            <button class="viewings__tickets" @click="visible ^= true">Kjøp Billett</button>
+         </section>
+
+         <form class="form" action="" v-if="visible">
+            <label class="form__element" for="date-and-time">Dag:</label>
+            <select class="form__element--day" name="date-and-time" id="date-and-time">
+               <option value="monday 14:30">{{ movie.todayStart }}</option>
+               <option value="monday 19:30">{{ movie.tomorrowStart }}</option>
+            </select>
+            <div   class="form__element" >Pris:</div>
+            <div   class="form__element" >{{ movie.price }}</div>
+            <label class="form__element" for="quantity">Anntall:</label>
+            <input class="form__element--quantity" type="number" id="quantity" name="quantity" min="1" max="10">
+            <label class="form__element" for="email">Epost:</label>
+            <input class="form__element--email" type="email" id="email" name="email">
+            <button class="form__element--button">Kjøp</button>
+         </form>
       </section>
-
-      <form class="form" action="" v-if="visible">
-         <label class="form__element" for="date-and-time">Dag:</label>
-         <select class="form__element--day" name="date-and-time" id="date-and-time">
-            <option value="monday 14:30">{{ movie.todayStart }}</option>
-            <option value="monday 19:30">{{ movie.tomorrowStart }}</option>
-         </select>
-         <div   class="form__element" >Pris:</div>
-         <div   class="form__element" >{{ movie.price }}</div>
-         <label class="form__element" for="quantity">Anntall:</label>
-         <input class="form__element--quantity" type="number" id="quantity" name="quantity" min="1" max="10">
-         <label class="form__element" for="email">Epost:</label>
-         <input class="form__element--email" type="email" id="email" name="email">
-         <button class="form__element--button">Kjøp</button>
-      </form>
    </main>
 </template>
 
@@ -128,5 +130,16 @@
       grid-row: 8;
       text-align: center;
       margin-top: 20px;
+   }
+
+   @media screen and (min-width: 1000px) {
+      .container {
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .program {
+         width: 33%;
+      }
    }
 </style>
