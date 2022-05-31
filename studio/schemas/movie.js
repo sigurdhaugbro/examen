@@ -29,9 +29,6 @@ export default {
       name: 'poster',
       title: 'Poster Image',
       type: 'image',
-      // options: {
-      //   hotspot: true,
-      // },
     },
     {
       name: 'todayStart',
@@ -48,18 +45,5 @@ export default {
       title: 'Price',
       type: 'number'
     },
-    {
-      name: 'trailer',
-      title: 'Trailer, embeded code from You Tube',
-      type: 'string'
-    }
-
-
   ],
-  preview: {
-    select: {
-      title: 'title',
-      media: 'poster',
-    },
-  },
 }

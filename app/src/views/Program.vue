@@ -46,26 +46,7 @@
       data() {
          return {
             visible: false,
-            movies: [
-               { 
-               id: '001', 
-               title: 'C´mon C´mon', 
-               price: 120, 
-               todayStart: 'Mandag 14:30', 
-               tomorrowStart: 'Tirsdag 18:30', 
-               poster: 'public/images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg', 
-               alt: 'Poster of C´mon C´mon'  
-               },
-               { 
-               id: '002', 
-               title: 'Licorice Pizza', 
-               price: 120, 
-               todayStart: 'Mandag 19:30', 
-               tomorrowStart: 'Tirsdag 11:30', 
-               poster: 'public/images/licorice-pizza.jpg', 
-               alt: 'Poster of Licorice Pizza' 
-               }
-            ] 
+            movies: [] 
          }
       },
    }
@@ -99,6 +80,7 @@
       color: white;
       font-size: var(--font-size-small);
       padding-top: 50px;
+      text-decoration: underline;
    }
 
    .viewings__tickets:hover {

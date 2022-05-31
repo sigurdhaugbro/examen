@@ -1,23 +1,29 @@
 <template>
-	<section class="landing">
-			<h1 class="landing__header">Nyheter</h1>
-		
-		<figure class="landing__image">
-			<img :src="movies[0].poster.asset.url" alt="">
-		</figure>
-	</section>
-	<section class="latest">
-		<figure class="latest__poster">
-			<img class="poster__image" :src="movies[1].poster.asset.url" alt="">
-			<figcaption class="poster__title">{{movies[1].title}}</figcaption>
-		</figure>
-	</section>
-	<section class="latest">
-		<figure class="latest__poster">
-			<img class="poster__image" :src="movies[2].poster.asset.url" alt="">
-			<figcaption class="poster__title">{{ movies[2].title }}</figcaption>
-		</figure>
-	</section>
+		<section class="landing">
+				<h1 class="landing__header">Nyheter</h1>
+				<figure class="landing__image">
+					<img :src="movies[0].poster.asset.url" alt="">
+					<RouterLink  :to="{ name: 'program' }" @click="close">
+						<figcaption class="poster__title">{{ movies[0].title }}</figcaption>
+					</RouterLink>
+				</figure>
+		</section>
+		<section class="latest">
+			<figure class="latest__poster">
+				<img class="poster__image" :src="movies[1].poster.asset.url" alt="">
+				<RouterLink  :to="{ name: 'program' }" @click="close">
+					<figcaption class="poster__title">{{ movies[1].title }}</figcaption>
+				</RouterLink>
+			</figure>
+		</section>
+		<section class="latest">
+			<figure class="latest__poster">
+				<img class="poster__image" :src="movies[2].poster.asset.url" alt="">
+				<RouterLink  :to="{ name: 'program' }" @click="close">
+					<figcaption class="poster__title">{{ movies[2].title }}</figcaption>
+				</RouterLink>
+			</figure>
+		</section>
 </template>
 
 <script>
@@ -34,29 +40,14 @@
 
 		data() {
 			return {
-				movies: [
-					{
-						title: 'Licorice Pizza', 
-						image: 'images/licorice-pizza.jpg', 
-						alt: 'poster'
-					},
-					{
-						title: 'C´mon C´mon', 
-						image: 'images/Cmon_Cmon_digiposter_1920x1080_NO_naa.jpeg', 
-						alt: 'poster'
-					},
-					{
-						title: 'Zero Fucks Given', 
-						image: 'images/zero.png', 
-						alt: 'poster'
-					}
-				]
+				movies: []
 			}
 		}
 	}
 </script>
 
 <style scoped>
+
 	.landing {
 		background: white;
 		/* height: 300px; */
@@ -70,8 +61,9 @@
 	.latest {
 		padding: 20px;
 	}
-
 	.poster__title {
 		padding-top: 10px;
+		color: black;
+		text-decoration: underline;
 	}
 </style>
