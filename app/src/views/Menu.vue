@@ -112,7 +112,11 @@
 	      blink 750ms steps(24) infinite;
       }
    
-      }
+   }
 
+   /* 
+      animasjon er henetet fra et tidlige projekt jeg har laget som var innspirert
+      av denne youtube videoen: https://www.youtube.com/watch?v=w1nhwUGsG6M&ab_channel=KevinPowell
+   */
 
 </style>
