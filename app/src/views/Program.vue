@@ -4,6 +4,7 @@
       <section v-for="movie in movies" :key="movie.id" class="program">
          <figure class="program__film">
             <img class="film__poster" :src='movie.poster.asset.url' :alt='movie.alt'>
+
             <figcaption class="film__caption">{{ movie.title }}</figcaption>
          </figure>
 
@@ -27,7 +28,7 @@
             <input class="form__element--quantity" type="number" id="quantity" name="quantity" min="1" max="10">
             <label class="form__element" for="email">Epost:</label>
             <input class="form__element--email" type="email" id="email" name="email">
-            <button class="form__element--button">Kjøp</button>
+            <button class="form__element--button" @click="confirmation()">Kjøp</button>
          </form>
       </section>
    </main>
@@ -51,6 +52,12 @@
             movies: [] 
          }
       },
+
+      methods: {
+         confirmation() {
+            alert('Takk for kjøpet')
+         },
+      }
    }
 </script>
 

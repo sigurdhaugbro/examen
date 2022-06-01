@@ -85,6 +85,9 @@
          };
       },
 
+      // koden sjekker index hvis den er på siste så begynner den på bynelsen
+      // hvis ikke så går den ett hakk videre
+
       methods: {
          previous() {
             if (this.index === 0) {
